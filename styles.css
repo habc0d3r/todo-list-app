@@ -123,3 +123,8 @@ form button:hover {
 .text-style {
   text-decoration: line-through;
 }
+
+.fall {
+  transform: translateY(8rem) rotateZ(30deg);
+  opacity: 0;
+}
