@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
-    <title>Todo List </title>
+    <title>Todo List</title>
   </head>
   <body>
     <header>
@@ -26,11 +26,16 @@
       <button class="todo-button" type="submit">
         <i class="ri-add-fill"></i>
       </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
     </form>
     <div class="todo-container">
-      <ul class="todo-list">
-        
-      </ul>
+      <ul class="todo-list"></ul>
     </div>
   </body>
 </html>

@@ -128,3 +128,49 @@ form button:hover {
   transform: translateY(8rem) rotateZ(30deg);
   opacity: 0;
 }
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-color: #fff;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px; 
+}
+select {
+  color: #4c7ae6;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 10rem;
+  padding: 0.9rem;
+  border-radius: 25px;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-0%, -11%);
+  padding: 1rem;
+  background: #4c7ae6;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: #fff;
+  color: #4c7ae6;
+}
