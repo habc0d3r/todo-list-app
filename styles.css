@@ -43,6 +43,7 @@ form input {
   border: none;
   padding-left: 1rem;
   min-width: 35%;
+  overflow: auto;
 }
 
 form input:focus {
@@ -71,6 +72,7 @@ form button:hover {
 .todo-list {
   min-width: 30%;
   list-style: none;
+  max-width: 80%;
 }
 
 .todo {
@@ -173,4 +175,22 @@ select {
 .select:hover::after {
   background: #fff;
   color: #4c7ae6;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width:768px) {
+  form {
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+  }
+
+  form input {
+    max-width: 60%;
+  }
+
+  .todo-item {
+    overflow: auto;
+  }
 }
