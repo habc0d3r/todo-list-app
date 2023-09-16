@@ -111,6 +111,7 @@ form button:hover {
 
 .todo-item {
   padding: 0 0.5rem;
+  overflow: auto;
 }
 
 .checked,
@@ -188,9 +189,5 @@ select {
 
   form input {
     max-width: 60%;
-  }
-
-  .todo-item {
-    overflow: auto;
   }
 }
