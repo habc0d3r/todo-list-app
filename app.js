@@ -10,13 +10,34 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
 
+// modal
+const closeBtn = document.querySelector(".close");
+const modal = document.querySelector(".modal");
+const modalWrapper = document.querySelector(".modal-content-wrapper");
+
+// event listeners
+// openBtn.addEventListener("click", function () {
+//   modal.style.display = "block";
+// });
+
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target == modalWrapper) {
+    modal.style.display = "none";
+  }
+});
+
 // Functions
 function addTodo(event) {
   // Prevent form from submitting
   event.preventDefault();
   // Prevent adding empty input
   if (todoInput.value == "") {
-    alert("Please enter a todo before adding it to the list.");
+    // alert("Please enter a todo before adding it to the list.");
+    modal.style.display = "block";
     return;
   }
   // Add div element

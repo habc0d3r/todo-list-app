@@ -149,7 +149,7 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
-  border-radius: 25px; 
+  border-radius: 25px;
 }
 select {
   color: #4c7ae6;
@@ -178,9 +178,66 @@ select {
   color: #4c7ae6;
 }
 
+/* Modal*/
+
+.btn {
+  background-color: #b19cf7;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #4c7ae6;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #555454ab;
+  z-index: 1;
+}
+
+.modal-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* .close-modal {
+  display: none;
+} */
+
+.modal-content {
+  width: 50%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 3rem;
+}
+
+.modal-text {
+  color: #4c7ae6;
+  text-shadow: 1px 1px 3px #977eec;
+}
+
+.modal .btn {
+  padding: 1rem 2rem;
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Responsive design for smaller screens */
-@media (max-width:768px) {
+@media (max-width: 768px) {
   form {
     flex-wrap: wrap;
     position: absolute;
@@ -189,5 +246,16 @@ select {
 
   form input {
     max-width: 60%;
+  }
+
+  /* Modal */
+  .modal-content {
+    text-align: center;
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 3rem;
   }
 }
